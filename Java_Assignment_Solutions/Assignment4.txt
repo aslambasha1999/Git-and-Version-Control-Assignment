@@ -1,0 +1,20 @@
+#!/bin/bash
+cd /disk1/kafka
+exec bash
+
+
+FILE=my.pid
+if [ -f " $FILE" ]; then
+	echo $PID>>$my.pid
+else
+	echo "pid file not found"
+
+fi
+
+if ps -p $PID > /dev/null
+then 
+	echo "kafka is running with $PID"
+else 
+	echo "kafka is not running with $PID"
+
+fi
